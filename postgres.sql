@@ -1,0 +1,15 @@
+DROP TABLE predicciones;
+
+CREATE TABLE predicciones (
+    id SERIAL PRIMARY KEY,
+    timestamp TIMESTAMPTZ NOT NULL,
+    benign INTEGER DEFAULT 0,
+    ldap INTEGER DEFAULT 0,
+    mssql INTEGER DEFAULT 0,
+    syn INTEGER DEFAULT 0,
+    udp INTEGER DEFAULT 0,
+    total_paquetes INTEGER NOT NULL,
+    label BOOLEAN NOT NULL
+);
+
+SELECT * FROM PREDICCIONES
